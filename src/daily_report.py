@@ -1,8 +1,16 @@
 """Gera o relatorio diario pre-jogo, varrendo as ligas configuradas em config.yaml."""
 
 import json
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+try:
+    # console do Windows por padrao usa cp1252, que nao imprime os
+    # caracteres de desenho de caixa (┌┬┐...) da tabela de odds.
+    sys.stdout.reconfigure(encoding="utf-8")
+except (AttributeError, ValueError):
+    pass
 
 from analysis import analyze_implied_odds
 from api_client import fetch_games_with_odds, get_api_key, load_config
@@ -12,6 +20,54 @@ from monte_carlo import derive_probabilities, estimate_xg_split, simulate_match
 
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 BRT = timezone(timedelta(hours=-3))
+
+COMPARE_BOOKMAKER_LABEL = "Betfair"
+
+
+def fair_odds(prob_pct: float | None) -> float | None:
+    """Odd 'justa' (sem vig) a partir da probabilidade simulada: odd = 1/prob.
+
+    E a odd que faria o valor esperado ser zero SE a probabilidade simulada
+    (Monte Carlo) estiver certa - nao e o preco de nenhum bookmaker real.
+    """
+    if not prob_pct:
+        return None
+    return round(100 / prob_pct, 2)
+
+
+def fair_odds_table(derived: dict) -> list[dict]:
+    """Monta a tabela Over/Under 2.5 com a odd justa da nossa simulacao.
+
+    A coluna do bookmaker de comparacao fica em branco de proposito - o preco
+    real (Betfair ou qualquer outro) varia demais entre jogos/regioes pra
+    buscar automaticamente de forma confiavel (ver historico: Betfair Exchange
+    nem sempre cobre a liga). Quem le o relatorio confere na casa e compara.
+    """
+    rows = []
+    for label, key in [("Over 2.5", "over_2_5_prob"), ("Under 2.5", "under_2_5_prob")]:
+        rows.append({"market": label, "fair_odds": fair_odds(derived.get(key))})
+    return rows
+
+
+def render_price_table(rows: list[dict]) -> str:
+    headers = ["Mercado", "Fair Odds (nossa analise)", f"{COMPARE_BOOKMAKER_LABEL} (voce compara)"]
+    table_rows = []
+    for row in rows:
+        fair = f"{row['fair_odds']:.2f}" if row["fair_odds"] is not None else "N/D"
+        table_rows.append([row["market"], fair, "___"])
+
+    widths = [max(len(h), *(len(r[i]) for r in table_rows)) + 2 for i, h in enumerate(headers)]
+
+    def border(left: str, mid: str, right: str) -> str:
+        return left + mid.join("─" * w for w in widths) + right
+
+    def fmt_row(cells: list[str]) -> str:
+        return "│" + "│".join(f" {c:<{w - 2}} " for c, w in zip(cells, widths)) + "│"
+
+    lines = [border("┌", "┬", "┐"), fmt_row(headers), border("├", "┼", "┤")]
+    lines += [fmt_row(r) for r in table_rows]
+    lines.append(border("└", "┴", "┘"))
+    return "\n".join(lines)
 
 
 def analyze_game(game: dict) -> dict | None:
@@ -56,6 +112,7 @@ def analyze_game(game: dict) -> dict | None:
         "away_team": game_analysis["away_team"],
         "commence_time": game.get("commence_time"),
         "suggestions": suggest_bets(game_analysis, monte_carlo_results),
+        "price_table": fair_odds_table(derived),
     }
 
 
@@ -65,6 +122,7 @@ def loop_all_leagues(leagues: list[dict], api_key: str, base_url: str, days: int
     """
     leagues_summary = []
     all_suggestions = []
+    game_price_tables = []
     credits_used = 0
     credits_remaining = None
     games_found_total = 0
@@ -87,6 +145,13 @@ def loop_all_leagues(leagues: list[dict], api_key: str, base_url: str, days: int
                 all_suggestions.append(
                     {**s, "league": league["name"], "match": f"{result['home_team']} vs {result['away_team']}"}
                 )
+            game_price_tables.append(
+                {
+                    "league": league["name"],
+                    "match": f"{result['home_team']} vs {result['away_team']}",
+                    "rows": result["price_table"],
+                }
+            )
 
         games_found_total += len(games)
         games_analyzed_total += len(analyzed)
@@ -109,6 +174,7 @@ def loop_all_leagues(leagues: list[dict], api_key: str, base_url: str, days: int
         "credits_used": credits_used,
         "credits_remaining": credits_remaining,
         "suggestions": all_suggestions,
+        "game_price_tables": game_price_tables,
     }
 
 
@@ -124,26 +190,33 @@ def format_report(report: dict, leagues: list[dict], now_brt: datetime) -> str:
         f"Jogos analisados (linha 2.5 Pinnacle): {report['games_analyzed_total']} ({report['coverage_pct']}% cobertura)",
         f"Creditos usados: {report['credits_used']} / {report['credits_remaining']}",
         "",
-        "=== SUGESTOES COM VALUE (Edge >= 5%) ===",
+        "=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===",
+        "",
+        "Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.",
+        f"Confira o preco real na {COMPARE_BOOKMAKER_LABEL} (ou outra casa) e compare: value se {COMPARE_BOOKMAKER_LABEL} >= Fair Odds.",
+        "",
     ]
 
-    if report["suggestions"]:
-        for s in report["suggestions"]:
-            lines.append(
-                f"[{s['league']}] {s['match']} - {s['market']}: edge {s['edge_pct']:+.2f}pp, "
-                f"odds~{s['decimal_odds_est']}, {s['units']} unidades"
-            )
+    games_with_fair_odds = 0
+    if report["game_price_tables"]:
+        for entry in report["game_price_tables"]:
+            lines.append(f"[{entry['league']}] {entry['match']}")
+            lines.append(render_price_table(entry["rows"]))
+            lines.append("")
+            if any(row["fair_odds"] is not None for row in entry["rows"]):
+                games_with_fair_odds += 1
     else:
-        lines.append("Nenhuma sugestao")
+        lines.append("Nenhum jogo analisado nesta janela.")
+        lines.append("")
 
-    lines.append("")
     lines.append("=== RESUMO ===")
+    lines.append(f"Fair odds calculadas pra {games_with_fair_odds} jogo(s). Comparacao com o mercado e manual.")
+
     if report["suggestions"]:
-        lines.append(f"{len(report['suggestions'])} sugestao(oes) com value encontrada(s):")
+        lines.append("")
+        lines.append(f"(Info adicional: {len(report['suggestions'])} sugestao(oes) via simulacao Monte Carlo, edge >= 5%):")
         for s in report["suggestions"]:
             lines.append(f"  - [{s['league']}] {s['match']}: {s['market']} ({s['units']} unidades)")
-    else:
-        lines.append("Nenhuma sugestao")
 
     return "\n".join(lines) + "\n"
 
