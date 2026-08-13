@@ -1,0 +1,17 @@
+{
+  "note": "DADOS SINTETICOS - jogo hipotetico, so pra validar que suggest_bets() sugere corretamente quando ha edge real.",
+  "game_id": "synthetic_test",
+  "home_team": "Time A (sintetico)",
+  "away_team": "Time B (sintetico)",
+  "suggestions": [
+    {
+      "market": "Over 2.5",
+      "simulated_prob": 60.0,
+      "implied_prob": 50.0,
+      "edge_pct": 10.0,
+      "decimal_odds_est": 2.0,
+      "kelly_fraction": 0.2,
+      "units": 5.0
+    }
+  ]
+}

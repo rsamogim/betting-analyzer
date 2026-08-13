@@ -1,0 +1,13 @@
+=== ANALISE PRE-JOGO 09:25 BRT (13/08/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 16
+Jogos analisados (linha 2.5 Pinnacle): 7 (43.8% cobertura)
+Creditos usados: 12 / 463
+
+=== SUGESTOES COM VALUE (Edge >= 5%) ===
+Nenhuma sugestao
+
+=== RESUMO ===
+Nenhuma sugestao

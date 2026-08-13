@@ -1,0 +1,81 @@
+# ==============================================================================
+# config.example.yaml
+# Exemplo de configuracao para integracao com The Odds API
+# (https://the-odds-api.com/)
+#
+# Copie este arquivo para "config.yaml" e preencha sua API key.
+# NUNCA faça commit de config.yaml com a chave real.
+# ==============================================================================
+
+odds_api:
+  # Sua API key pessoal (obtida em https://the-odds-api.com/ apos criar conta)
+  api_key: "seu_api_key_aqui"
+
+  # Host base da API (v4)
+  base_url: "https://api.the-odds-api.com/v4"
+
+  # Ligas de futebol que queremos monitorar (sport_key oficial da API)
+  leagues:
+    - key: "soccer_epl"                 # Premier League (Inglaterra)
+      name: "Premier League"
+    - key: "soccer_spain_la_liga"       # LaLiga (Espanha)
+      name: "LaLiga"
+    - key: "soccer_italy_serie_a"       # Serie A (Italia)
+      name: "Serie A"
+    - key: "soccer_germany_bundesliga"  # Bundesliga (Alemanha)
+      name: "Bundesliga"
+    - key: "soccer_france_ligue_one"    # Ligue 1 (Franca)
+      name: "Ligue 1"
+    - key: "soccer_brazil_campeonato"   # Brasileirao Serie A
+      name: "Brasileirao Serie A"
+
+  # Regiao de bookmakers a consultar.
+  # Pinnacle esta na regiao "eu", MAS SO EM PLANOS PAGOS (nao disponivel no
+  # tier gratuito "Starter" - o free tier da acesso a "most bookmakers",
+  # nao a "all bookmakers". Ver findings no PR/changelog).
+  # Obs: odds da Pinnacle vem do site publico e podem ter atraso.
+  regions:
+    - "eu"
+
+  # Bookmaker(s) especifico(s) a filtrar (opcional).
+  # Se vazio, retorna todos os bookmakers da(s) regiao(oes) acima.
+  # IMPORTANTE: "pinnacle" so retorna dados se sua chave for de um plano pago.
+  # No tier gratuito, considere usar outro bookmaker eu (ex: "onexbet", "betsson")
+  # ou deixar a lista vazia para pegar o que estiver disponivel.
+  bookmakers:
+    - "pinnacle"
+
+  # Mercados de aposta desejados (markets)
+  # Custo de cada request = (numero de markets) x (numero de regions)
+  # Esse custo NAO e por jogo: uma unica chamada devolve odds de TODOS os
+  # jogos futuros da liga consultada.
+  markets:
+    - "h2h"      # 1X2 (resultado final, inclui empate no futebol)
+    - "totals"   # Over/Under (ex: over/under 2.5 gols)
+    - "spreads"  # Handicap (equivalente a asian handicap para futebol)
+    - "btts"     # Ambas equipes marcam (Both Teams To Score)
+
+  # Formato de odds retornado: decimal | american
+  odds_format: "decimal"
+
+  # Formato de datas: iso | unix
+  date_format: "iso"
+
+  # Timeout de requisicoes HTTP (segundos)
+  request_timeout: 10
+
+# ------------------------------------------------------------------------------
+# Controle de uso / rate limit
+# ------------------------------------------------------------------------------
+rate_limit:
+  # Plano gratuito ("Starter"): 500 credits/mes
+  # 1 credit = 1 market x 1 region por chamada (retorna TODOS os jogos da liga,
+  # nao e cobrado por jogo individual)
+  # Ex.: 6 ligas x 4 markets x 1 region (eu) = 24 credits por "rodada" completa
+  # => ~20 rodadas completas possiveis por mes no free tier
+  # (isso cai bastante se markets/regions crescerem - historico custa 10x mais)
+  monthly_credit_limit: 500
+
+  # Intervalo minimo (em minutos) entre atualizacoes completas,
+  # para nao estourar o limite mensal de credits
+  min_refresh_interval_minutes: 60

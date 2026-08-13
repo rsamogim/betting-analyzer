@@ -1,0 +1,17 @@
+{
+  "game_id": "cd1f0173ec061d9b8a8b22ab8f2f8393",
+  "home_team": "Everton",
+  "away_team": "Crystal Palace",
+  "confidence_pct": 65.0,
+  "correlation": "fraca",
+  "xg_expected": 2.646,
+  "xg_confidence": "media (calibrado via Poisson, ainda nao validado contra resultados reais)",
+  "recommendation": "Validar xg_expected com dados reais (ex: Understat) antes de usar em decisoes.",
+  "probs_normalized": {
+    "home": 44.3,
+    "draw": 27.9,
+    "away": 27.8,
+    "over_2_5": 49.3,
+    "under_2_5": 50.7
+  }
+}

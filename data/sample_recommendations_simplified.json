@@ -1,0 +1,20 @@
+{
+  "game_id": "cd1f0173ec061d9b8a8b22ab8f2f8393",
+  "home_team": "Everton",
+  "away_team": "Crystal Palace",
+  "market_analysis": [
+    {
+      "market": "Over 2.5",
+      "simulated_prob": 49.21,
+      "implied_prob": 49.3,
+      "edge_pct": -0.09
+    },
+    {
+      "market": "Under 2.5",
+      "simulated_prob": 50.79,
+      "implied_prob": 50.7,
+      "edge_pct": 0.09
+    }
+  ],
+  "suggestions": []
+}

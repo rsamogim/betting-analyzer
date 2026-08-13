@@ -1,0 +1,9 @@
+# Configuracao local com API key real - nunca commitar
+config.yaml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
