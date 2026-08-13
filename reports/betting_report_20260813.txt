@@ -1,13 +1,71 @@
-=== ANALISE PRE-JOGO 09:36 BRT (13/08/2026) ===
+=== ANALISE PRE-JOGO 09:57 BRT (13/08/2026) ===
 
 Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
 
 Jogos encontrados: 16
 Jogos analisados (linha 2.5 Pinnacle): 7 (43.8% cobertura)
-Creditos usados: 12 / 449
+Creditos usados: 12 / 400
 
-=== SUGESTOES COM VALUE (Edge >= 5%) ===
-Nenhuma sugestao
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+[Brasileirao Serie A] Sao Paulo vs Coritiba
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.06                      │ ___                    │
+│ Under 2.5 │ 1.95                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Chapecoense vs Bahia
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.97                      │ ___                    │
+│ Under 2.5 │ 2.03                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Atletico Mineiro vs Grêmio
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.08                      │ ___                    │
+│ Under 2.5 │ 1.93                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Vasco da Gama vs Santos
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.13                      │ ___                    │
+│ Under 2.5 │ 1.88                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Vitoria vs Botafogo
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.02                      │ ___                    │
+│ Under 2.5 │ 1.98                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Mirassol vs Flamengo
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.05                      │ ___                    │
+│ Under 2.5 │ 1.95                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Internacional vs Remo
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.89                      │ ___                    │
+│ Under 2.5 │ 2.12                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
 
 === RESUMO ===
-Nenhuma sugestao
+Fair odds calculadas pra 7 jogo(s). Comparacao com o mercado e manual.
