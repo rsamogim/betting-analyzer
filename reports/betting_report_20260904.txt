@@ -1,0 +1,159 @@
+=== ANALISE PRE-JOGO 12:25 BRT (04/09/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 57
+Jogos analisados (linha 2.5 Pinnacle): 18 (31.6% cobertura)
+Creditos usados: 12 / 452
+
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+[Premier League] Brentford vs Sunderland
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.89                      │ ___                    │
+│ Under 2.5 │ 2.12                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Premier League] Brighton and Hove Albion vs Leeds United
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.94                      │ ___                    │
+│ Under 2.5 │ 2.06                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Premier League] Fulham vs Crystal Palace
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.97                      │ ___                    │
+│ Under 2.5 │ 2.04                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Premier League] Nottingham Forest vs Tottenham Hotspur
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.97                      │ ___                    │
+│ Under 2.5 │ 2.03                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Premier League] Hull City vs Aston Villa
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.98                      │ ___                    │
+│ Under 2.5 │ 2.02                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Athletic Bilbao vs Atlético Madrid
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.98                      │ ___                    │
+│ Under 2.5 │ 2.02                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Rayo Vallecano vs Real Racing Club de Santander
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.89                      │ ___                    │
+│ Under 2.5 │ 2.13                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Málaga vs Levante
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.04                      │ ___                    │
+│ Under 2.5 │ 1.96                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] Genoa vs Como
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.06                      │ ___                    │
+│ Under 2.5 │ 1.95                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] Inter Milan vs Napoli
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.09                      │ ___                    │
+│ Under 2.5 │ 1.92                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] AS Roma vs Atalanta BC
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.94                      │ ___                    │
+│ Under 2.5 │ 2.06                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] Frosinone vs Venezia
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.92                      │ ___                    │
+│ Under 2.5 │ 2.09                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Ligue 1] Nice vs Le Mans FC
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.89                      │ ___                    │
+│ Under 2.5 │ 2.13                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Ligue 1] Troyes vs Strasbourg
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.92                      │ ___                    │
+│ Under 2.5 │ 2.08                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Bragantino-SP vs Bahia
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.91                      │ ___                    │
+│ Under 2.5 │ 2.10                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Internacional vs Santos
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.03                      │ ___                    │
+│ Under 2.5 │ 1.98                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Botafogo vs Palmeiras
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.97                      │ ___                    │
+│ Under 2.5 │ 2.03                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Corinthians vs Chapecoense
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.00                      │ ___                    │
+│ Under 2.5 │ 2.00                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+=== RESUMO ===
+Fair odds calculadas pra 18 jogo(s). Comparacao com o mercado e manual.
