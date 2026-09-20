@@ -1,0 +1,47 @@
+=== ANALISE PRE-JOGO 12:04 BRT (20/09/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 14
+Jogos analisados (linha 2.5 Pinnacle): 4 (28.6% cobertura)
+Creditos usados: 12 / 260
+
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+[LaLiga] Valencia vs Real Sociedad
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.01                      │ ___                    │
+│ Under 2.5 │ 1.99                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] Juventus vs Atalanta BC
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.95                      │ ___                    │
+│ Under 2.5 │ 2.05                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Vitoria vs Cruzeiro
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.92                      │ ___                    │
+│ Under 2.5 │ 2.09                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Atletico Paranaense vs Bahia
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.97                      │ ___                    │
+│ Under 2.5 │ 2.03                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+=== RESUMO ===
+Fair odds calculadas pra 4 jogo(s). Comparacao com o mercado e manual.
