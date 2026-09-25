@@ -1,0 +1,17 @@
+=== ANALISE PRE-JOGO 13:07 BRT (25/09/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 0
+Jogos analisados (linha 2.5 Pinnacle): 0 (0.0% cobertura)
+Creditos usados: 12 / 198
+
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+Nenhum jogo analisado nesta janela.
+
+=== RESUMO ===
+Fair odds calculadas pra 0 jogo(s). Comparacao com o mercado e manual.
