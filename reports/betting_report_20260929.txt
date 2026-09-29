@@ -1,0 +1,23 @@
+=== ANALISE PRE-JOGO 14:15 BRT (29/09/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 2
+Jogos analisados (linha 2.5 Pinnacle): 1 (50.0% cobertura)
+Creditos usados: 12 / 150
+
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+[Brasileirao Serie A] Atletico Mineiro vs Bragantino-SP
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.03                      │ ___                    │
+│ Under 2.5 │ 1.97                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+=== RESUMO ===
+Fair odds calculadas pra 1 jogo(s). Comparacao com o mercado e manual.
