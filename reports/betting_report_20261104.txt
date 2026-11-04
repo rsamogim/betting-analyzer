@@ -1,0 +1,79 @@
+=== ANALISE PRE-JOGO 16:03 BRT (04/11/2026) ===
+
+Ligas analisadas: Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Brasileirao Serie A
+
+Jogos encontrados: 55
+Jogos analisados (linha 2.5 Pinnacle): 8 (14.5% cobertura)
+Creditos usados: 12 / 452
+
+=== FAIR ODDS (nossa simulacao) vs mercado (Over/Under 2.5) ===
+
+Fair Odds = 1 / probabilidade simulada (Monte Carlo), sem vig - nao e preco de bookmaker nenhum.
+Confira o preco real na Betfair (ou outra casa) e compare: value se Betfair >= Fair Odds.
+
+[Premier League] Leeds United vs Tottenham Hotspur
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.08                      │ ___                    │
+│ Under 2.5 │ 1.92                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Premier League] Sunderland vs Chelsea
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.90                      │ ___                    │
+│ Under 2.5 │ 2.11                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Espanyol vs Deportivo La Coruña
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.15                      │ ___                    │
+│ Under 2.5 │ 1.87                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Celta Vigo vs Levante
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.98                      │ ___                    │
+│ Under 2.5 │ 2.02                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[LaLiga] Villarreal vs Getafe
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.85                      │ ___                    │
+│ Under 2.5 │ 2.17                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Serie A] Torino vs Lecce
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.98                      │ ___                    │
+│ Under 2.5 │ 2.02                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Atletico Paranaense vs Vasco da Gama
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 1.91                      │ ___                    │
+│ Under 2.5 │ 2.09                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+[Brasileirao Serie A] Vitoria vs Fluminense
+┌───────────┬───────────────────────────┬────────────────────────┐
+│ Mercado   │ Fair Odds (nossa analise) │ Betfair (voce compara) │
+├───────────┼───────────────────────────┼────────────────────────┤
+│ Over 2.5  │ 2.16                      │ ___                    │
+│ Under 2.5 │ 1.86                      │ ___                    │
+└───────────┴───────────────────────────┴────────────────────────┘
+
+=== RESUMO ===
+Fair odds calculadas pra 8 jogo(s). Comparacao com o mercado e manual.
